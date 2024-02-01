@@ -1,0 +1,3 @@
+- Atmosphère: https://github.com/Atmosphere-NX/Atmosphere
+- Hekate : https://github.com/CTCaer/hekate
+- sys-patch : https://github.com/ITotalJustice/sys-patch
