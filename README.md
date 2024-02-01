@@ -5,3 +5,5 @@
 - JKSV : https://github.com/J-D-K/JKSV
 - dbi : https://github.com/rashevskyv/dbi
 - TegraExplorer : https://github.com/suchmememanyskill/TegraExplorer
+- nx-ovlloader : https://github.com/WerWolv/nx-ovlloader
+- Ultrahand-Overlay : https://github.com/ppkantorski/Ultrahand-Overlay
