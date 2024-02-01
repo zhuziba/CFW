@@ -1,3 +1,7 @@
 - Atmosphère: https://github.com/Atmosphere-NX/Atmosphere
 - Hekate : https://github.com/CTCaer/hekate
 - sys-patch : https://github.com/ITotalJustice/sys-patch
+- wiliwili : https://github.com/xfangfang/wiliwili
+- JKSV : https://github.com/J-D-K/JKSV
+- dbi : https://github.com/rashevskyv/dbi
+- TegraExplorer : https://github.com/suchmememanyskill/TegraExplorer
