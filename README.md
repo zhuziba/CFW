@@ -6,4 +6,5 @@
 - dbi : https://github.com/rashevskyv/dbi
 - TegraExplorer : https://github.com/suchmememanyskill/TegraExplorer
 - nx-ovlloader : https://github.com/WerWolv/nx-ovlloader
+- Goldleaf : https://github.com/XorTroll/Goldleaf
 - Ultrahand-Overlay : https://github.com/ppkantorski/Ultrahand-Overlay
