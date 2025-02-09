@@ -1,0 +1,66 @@
+name: rules
+on:
+  watch:
+    types: started
+# 定时触发编译
+  schedule:
+    - cron: 39 22 * * *
+jobs:
+  build:
+    runs-on: Ubuntu-20.04  
+    steps:
+    - uses: actions/checkout@v4
+    - name: down switchsd
+      run: |
+        mkdir -p ./
+        wget -O /tmp/atmosphere.zip https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.8.0-prerelease/atmosphere-1.8.0-master-c6014b533+hbl-2.4.4+hbmenu-3.6.0.zip
+        #wget -O /tmp/hekate.zip https://github.com/CTCaer/hekate/releases/download/v6.2.2/hekate_ctcaer_6.2.2_Nyx_1.6.4.zip
+        wget -O /tmp/hekate.zip https://github.com/easyworld/hekate/releases/download/v6.2.2/hekate_ctcaer_6.2.2_Nyx_1.6.4_sc.zip
+        unzip -o /tmp/atmosphere.zip -d ./
+        unzip -o /tmp/hekate.zip -d ./
+        mv ./switchsd/hekate_ctcaer_6.2.2.bin ./payload.bin
+        wget -O ./bootloader/payloads/TegraExplorer.bin https://github.com/suchmememanyskill/TegraExplorer/releases/latest/download/TegraExplorer.bin
+        wget -O ./bootloader/payloads/fusee.bin https://github.com/Atmosphere-NX/Atmosphere/releases/latest/download/fusee.bin
+        wget -O ./switch/DBI/dbi.config  https://github.com/rashevskyv/dbi/releases/download/756ru/dbi.config
+        mkdir -p ./switch/DBI
+        wget -O ./switch/DBI/DBI.nro https://github.com/rashevskyv/dbi/releases/download/756ru/DBI.nro
+        mkdir -p ./switch/JKSV
+        wget -O ./switch/JKSV/JKSV.nro https://github.com/J-D-K/JKSV/releases/latest/download/JKSV.nro
+        mkdir -p ./switch/Goldleaf
+        wget -O ./switch/Goldleaf/Goldleaf.nro https://github.com/XorTroll/Goldleaf/releases/latest/download/Goldleaf.nro
+        mkdir -p ./switch/Amiigo
+        wget -O ./switch/Amiigo/Amiigo.nro https://github.com/CompSciOrBust/Amiigo/releases/latest/download/Amiigo.nro
+        mkdir -p ./switch/appstore
+        wget -O ./switch/appstore/appstore.nro https://github.com/fortheusers/hb-appstore/releases/latest/download/appstore.nro
+        mkdir -p ./switch/90DNS
+        wget -O ./switch/90DNS/90DNS_tester.nro https://github.com/meganukebmp/Switch_90DNS_tester/releases/download/v1.0.4/Switch_90DNS_tester.nro
+        #wget -O /tmp/sigpatches.zip https://sigmapatches.su/sigpatches.zip
+        #unzip -o /tmp/sigpatches.zip -d ./switchsd
+        wget -O ./switch/.overlays/ovlSysmodules.ovl https://github.com/WerWolv/ovl-sysmodules/releases/download/v1.3.1/ovlSysmodules.ovl
+        wget -O ./switch/.overlays/ovlmenu.ovl https://github.com/ppkantorski/Ultrahand-Overlay/releases/latest/download/ovlmenu.ovl
+        wget -O /tmp/sys-clk.zip https://github.com/retronx-team/sys-clk/releases/download/2.0.1/sys-clk-2.0.1.zip
+        unzip -o /tmp/sys-clk.zip -d ./
+        rm -rf ./switchsd/README.md
+        wget -O /tmp/nx-ovlloader.zip https://github.com/WerWolv/nx-ovlloader/releases/download/v1.0.7/nx-ovlloader.zip
+        unzip -o /tmp/nx-ovlloader.zip -d ./
+        sudo apt-get install p7zip-full
+        wget -O /tmp/nx-tab.7z https://download.switchroot.org/android-11/nx-tab-beta2.75-20230705-rel.7z
+        7z x /tmp/nx-tab.7z -y -o./
+        rm -rf ./lineage-18.1-20230705-UNOFFICIAL-nx_tab.zip
+        wget -O /tmp/wiliwili.zip https://github.com/xfangfang/wiliwili/releases/latest/download/wiliwili-NintendoSwitch.zip
+        unzip -o /tmp/wiliwili.zip -d ./switch
+        rm -rf ./switch/wiliwili/安装必读.txt
+        wget -O /tmp/tencent-switcher-gui.zip https://github.com/CaiMiao/Tencent-switcher-GUI/releases/download/0.1.2/tencent-switcher-gui.zip
+        mkdir -p ./switch/tencent
+        unzip -o /tmp/tencent-switcher-gui.zip -d ./switch/tencent
+    - name: 'Commit Files'
+      id: commit
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -a -m "Add changes"
+    - name: Push Dust
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{secrets.GITHUB_TOKEN}}
