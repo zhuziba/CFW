@@ -21,8 +21,8 @@ jobs:
         mv ./hekate_ctcaer_6.2.2.bin ./payload.bin
         wget -O ./bootloader/payloads/TegraExplorer.bin https://github.com/suchmememanyskill/TegraExplorer/releases/latest/download/TegraExplorer.bin
         wget -O ./bootloader/payloads/fusee.bin https://github.com/Atmosphere-NX/Atmosphere/releases/latest/download/fusee.bin
-        wget -O ./switch/DBI/dbi.config  https://github.com/rashevskyv/dbi/releases/download/756ru/dbi.config
         mkdir -p ./switch/DBI
+        wget -O ./switch/DBI/dbi.config  https://github.com/rashevskyv/dbi/releases/download/756ru/dbi.config
         wget -O ./switch/DBI/DBI.nro https://github.com/rashevskyv/dbi/releases/download/756ru/DBI.nro
         mkdir -p ./switch/JKSV
         wget -O ./switch/JKSV/JKSV.nro https://github.com/J-D-K/JKSV/releases/latest/download/JKSV.nro
