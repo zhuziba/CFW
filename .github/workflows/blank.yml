@@ -18,7 +18,7 @@ jobs:
         wget -O /tmp/hekate.zip https://github.com/easyworld/hekate/releases/download/v6.2.2/hekate_ctcaer_6.2.2_Nyx_1.6.4_sc.zip
         unzip -o /tmp/atmosphere.zip -d ./
         unzip -o /tmp/hekate.zip -d ./
-        mv ./switchsd/hekate_ctcaer_6.2.2.bin ./payload.bin
+        mv ./hekate_ctcaer_6.2.2.bin ./payload.bin
         wget -O ./bootloader/payloads/TegraExplorer.bin https://github.com/suchmememanyskill/TegraExplorer/releases/latest/download/TegraExplorer.bin
         wget -O ./bootloader/payloads/fusee.bin https://github.com/Atmosphere-NX/Atmosphere/releases/latest/download/fusee.bin
         wget -O ./switch/DBI/dbi.config  https://github.com/rashevskyv/dbi/releases/download/756ru/dbi.config
