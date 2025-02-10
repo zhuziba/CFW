@@ -21,6 +21,7 @@ jobs:
         unzip -o /tmp/atmosphere.zip -d ./
         unzip -o /tmp/hekate.zip -d ./
         mv ./hekate_ctcaer_6.2.2.bin ./payload.bin
+        mkdir -p ./bootloader/payloads
         wget -O ./bootloader/payloads/TegraExplorer.bin https://github.com/suchmememanyskill/TegraExplorer/releases/latest/download/TegraExplorer.bin
         wget -O ./bootloader/payloads/fusee.bin https://github.com/Atmosphere-NX/Atmosphere/releases/latest/download/fusee.bin
         mkdir -p ./switch/DBI
