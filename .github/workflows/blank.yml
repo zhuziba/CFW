@@ -40,6 +40,8 @@ jobs:
         wget -q -O ./switch/Amiigo/Amiigo.nro https://github.com/CompSciOrBust/Amiigo/releases/latest/download/Amiigo.nro
         mkdir -p ./switch/appstore
         wget -q -O ./switch/appstore/appstore.nro https://github.com/fortheusers/hb-appstore/releases/latest/download/appstore.nro
+        mkdir -p ./switch/Switchfin
+        wget -q -O ./switch/Switchfin/Switchfin.nro https://github.com/dragonflylee/switchfin/releases/download/0.6.1/Switchfin.nro
         mkdir -p ./switch/90DNS
         wget -q -O ./switch/90DNS/90DNS_tester.nro https://github.com/meganukebmp/Switch_90DNS_tester/releases/download/v1.0.4/Switch_90DNS_tester.nro
         #wget -O /tmp/sigpatches.zip https://sigmapatches.su/sigpatches.zip
