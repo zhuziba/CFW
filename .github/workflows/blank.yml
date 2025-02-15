@@ -30,8 +30,8 @@ jobs:
         wget -q -O /tmp/sys-patch.zip https://github.com/impeeza/sys-patch/releases/latest/download/sys-patch.zip
         unzip -o /tmp/sys-patch.zip -d ./
         mkdir -p ./switch/DBI
-        wget -q -O ./switch/DBI/dbi.config  https://github.com/rashevskyv/dbi/releases/download/756ru/dbi.config
-        wget -q -O ./switch/DBI/DBI.nro https://github.com/rashevskyv/dbi/releases/download/756ru/DBI.nro
+        wget -q -O ./switch/DBI/dbi.config  https://github.com/rashevskyv/dbi/releases/latest/download/dbi.config
+        wget -q -O ./switch/DBI/DBI.nro https://github.com/rashevskyv/dbi/releases/latest/download/DBI.nro
         mkdir -p ./switch/JKSV
         wget -q -O ./switch/JKSV/JKSV.nro https://github.com/J-D-K/JKSV/releases/latest/download/JKSV.nro
         mkdir -p ./switch/Goldleaf
