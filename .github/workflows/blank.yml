@@ -27,7 +27,7 @@ jobs:
         mkdir -p ./bootloader/payloads
         wget -q -O ./bootloader/payloads/TegraExplorer.bin https://github.com/suchmememanyskill/TegraExplorer/releases/latest/download/TegraExplorer.bin
         wget -q -O ./bootloader/payloads/fusee.bin https://github.com/Atmosphere-NX/Atmosphere/releases/latest/download/fusee.bin
-        wget -q -O /tmp/sys-patch.zip https://github.com/impeeza/sys-patch/releases/download/v1.5.5/sys-patch.zip
+        wget -q -O /tmp/sys-patch.zip https://github.com/impeeza/sys-patch/releases/latest/download/sys-patch.zip
         unzip -o /tmp/sys-patch.zip -d ./
         mkdir -p ./switch/DBI
         wget -q -O ./switch/DBI/dbi.config  https://github.com/rashevskyv/dbi/releases/download/756ru/dbi.config
