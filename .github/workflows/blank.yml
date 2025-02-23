@@ -61,6 +61,7 @@ jobs:
         wget -q -O /tmp/wiliwili.zip https://github.com/xfangfang/wiliwili/releases/latest/download/wiliwili-NintendoSwitch.zip
         unzip -o /tmp/wiliwili.zip -d ./switch
         rm -rf ./switch/wiliwili/安装必读.txt
+        rm -rf ./switch/wiliwili/README.md
         wget -q -O /tmp/tencent-switcher-gui.zip https://github.com/CaiMiao/Tencent-switcher-GUI/releases/download/0.1.2/tencent-switcher-gui.zip
         mkdir -p ./switch/tencent
         unzip -o /tmp/tencent-switcher-gui.zip -d ./switch/tencent
