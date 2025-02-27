@@ -47,7 +47,7 @@ jobs:
         wget -q -O ./switch/90DNS/90DNS_tester.nro https://github.com/meganukebmp/Switch_90DNS_tester/releases/download/v1.0.4/Switch_90DNS_tester.nro
         #wget -O /tmp/sigpatches.zip https://sigmapatches.su/sigpatches.zip
         #unzip -o /tmp/sigpatches.zip -d ./switchsd
-        wget -q -O ./switch/.overlays/ovlSysmodules.ovl https://github.com/WerWolv/ovl-sysmodules/releases/download/v1.3.1/ovlSysmodules.ovl
+        wget -q -O ./switch/.overlays/ovlSysmodules.ovl https://github.com/WerWolv/ovl-sysmodules/releases/latest/download/ovlSysmodules.ovl
         wget -q -O ./switch/.overlays/ovlmenu.ovl https://github.com/ppkantorski/Ultrahand-Overlay/releases/latest/download/ovlmenu.ovl
         wget -q -O /tmp/sys-clk.zip https://github.com/retronx-team/sys-clk/releases/download/2.0.1/sys-clk-2.0.1.zip
         unzip -o /tmp/sys-clk.zip -d ./
