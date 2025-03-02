@@ -68,6 +68,12 @@ jobs:
         unzip -o /tmp/tencent-switcher-gui.zip -d ./switch/tencent
         wget -q -O /tmp/switch_sysmod.zip https://github.com/ITotalJustice/ftpsrv/releases/download/1.2.2/switch_sysmod.zip
         unzip -o /tmp/switch_sysmod.zip -d ./
+        wget -q -O /tmp/Awoo-Installer.zip https://github.com/Huntereb/Awoo-Installer/releases/download/1.3.5/Awoo-Installer.zip
+        unzip -o /tmp/Awoo-Installer.zip -d ./
+        wget -q -O /tmp/aio-switch-updater.zip https://github.com/HamletDuFromage/aio-switch-updater/releases/download/2.23.2/aio-switch-updater.zip
+        unzip -o /tmp/aio-switch-updater.zip -d ./
+        wget -q -O /tmp/SaltyNX-1.2.0.zip https://github.com/masagrator/SaltyNX/releases/download/1.2.0/SaltyNX-1.2.0.zip
+        unzip -o /tmp/SaltyNX-1.2.0.zip -d ./
     - name: 'Commit Files'
       id: commit
       run: |
