@@ -66,6 +66,8 @@ jobs:
         wget -q -O /tmp/tencent-switcher-gui.zip https://github.com/CaiMiao/Tencent-switcher-GUI/releases/download/0.1.2/tencent-switcher-gui.zip
         mkdir -p ./switch/tencent
         unzip -o /tmp/tencent-switcher-gui.zip -d ./switch/tencent
+        wget -q -O /tmp/switch_sysmod.zip https://github.com/ITotalJustice/ftpsrv/releases/download/1.2.2/switch_sysmod.zip
+        unzip -o /tmp/switch_sysmod.zip -d ./
     - name: 'Commit Files'
       id: commit
       run: |
