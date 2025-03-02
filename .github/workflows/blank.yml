@@ -66,6 +66,8 @@ jobs:
         wget -q -O /tmp/tencent-switcher-gui.zip https://github.com/CaiMiao/Tencent-switcher-GUI/releases/download/0.1.2/tencent-switcher-gui.zip
         mkdir -p ./switch/tencent
         unzip -o /tmp/tencent-switcher-gui.zip -d ./switch/tencent
+        mkdir -p ./switch/tinfoil
+        wget -q -O ./switch/tinfoil/tinfoil.nro https://tinfoil.media/repo/Tinfoil%20%5B050000BADDAD0000%5D%5B19.0%5D%5Bv1%5D.nsp
     - name: 'Commit Files'
       id: commit
       run: |
