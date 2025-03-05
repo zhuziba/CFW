@@ -50,7 +50,7 @@ jobs:
         mkdir -p ./switch/90DNS
         wget -q -O ./switch/90DNS/90DNS_tester.nro https://github.com/meganukebmp/Switch_90DNS_tester/releases/download/v1.0.4/Switch_90DNS_tester.nro
         #wget -O /tmp/sigpatches.zip https://sigmapatches.su/sigpatches.zip
-        #unzip -o /tmp/sigpatches.zip -d ./switchsd
+        #unzip -o /tmp/sigpatches.zip -d ./
         wget -q -O ./switch/.overlays/ovlSysmodules.ovl https://github.com/WerWolv/ovl-sysmodules/releases/latest/download/ovlSysmodules.ovl
         wget -q -O ./switch/.overlays/ovlmenu.ovl https://github.com/ppkantorski/Ultrahand-Overlay/releases/latest/download/ovlmenu.ovl
         wget -q -O ./switch/.overlays/FPSLocker.ovl https://github.com/masagrator/FPSLocker/releases/download/2.1.0/FPSLocker.ovl
