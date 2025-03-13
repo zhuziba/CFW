@@ -80,6 +80,8 @@ jobs:
         unzip -o /tmp/SaltyNX-1.2.0.zip -d ./
         wget -q -O /tmp/sphaira.zip https://github.com/ITotalJustice/sphaira/releases/download/0.6.2/sphaira.zip
         unzip -o /tmp/sphaira.zip -d ./
+        wget -q -O /tmp/uLaunch.zip https://github.com/XorTroll/uLaunch/releases/download/1.0.0/uLaunch.zip
+        unzip -o /tmp/uLaunch.zip -d ./
     - name: 'Commit Files'
       id: commit
       run: |
