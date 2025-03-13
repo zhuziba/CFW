@@ -84,6 +84,7 @@ jobs:
         unzip -o /tmp/uLaunch.zip -d ./
         #将目录 /SdOut中的所有文件移到当前目录
         cp -r ./SdOut/* ./
+        rm -rf ./SdOut
     - name: 'Commit Files'
       id: commit
       run: |
