@@ -83,7 +83,7 @@ jobs:
         wget -q -O /tmp/uLaunch.zip https://github.com/XorTroll/uLaunch/releases/download/1.0.0/uLaunch.zip
         unzip -o /tmp/uLaunch.zip -d ./
         #将目录 /SdOut中的所有文件移到当前目录
-        mv ./SdOut/* ./
+        cp -r ./SdOut/* ./
     - name: 'Commit Files'
       id: commit
       run: |
