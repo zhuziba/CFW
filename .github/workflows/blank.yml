@@ -46,7 +46,7 @@ jobs:
         mkdir -p ./switch/Haku33
         wget -q -O ./switch/Haku33/Haku33.nro https://github.com/StarDustCFW/Haku33/releases/download/7.0/Haku33.nro
         mkdir -p ./switch/NX-Activity-Log
-        wget -q -O ./switch/NX-Activity-Log/NX-Activity-Log.nro https://github.com/zdm65477730/NX-Activity-Log/releases/download/v1.5.4/NX-Activity-Log.nro
+        wget -q -O ./switch/NX-Activity-Log/NX-Activity-Log.nro https://github.com/zdm65477730/NX-Activity-Log/releases/latest/download/NX-Activity-Log.nro
         mkdir -p ./switch/90DNS
         wget -q -O ./switch/90DNS/90DNS_tester.nro https://github.com/meganukebmp/Switch_90DNS_tester/releases/download/v1.0.4/Switch_90DNS_tester.nro
         #wget -O /tmp/sigpatches.zip https://sigmapatches.su/sigpatches.zip
@@ -60,9 +60,9 @@ jobs:
         wget -q -O /tmp/nx-ovlloader.zip https://github.com/WerWolv/nx-ovlloader/releases/download/v1.0.7/nx-ovlloader.zip
         unzip -o /tmp/nx-ovlloader.zip -d ./
         sudo apt-get install p7zip-full
-        #wget -q -O /tmp/nx-tab.7z https://download.switchroot.org/android-11/nx-tab-beta2.75-20230705-rel.7z
-        #7z x /tmp/nx-tab.7z -y -o./
-        #rm -rf ./lineage-18.1-20230705-UNOFFICIAL-nx_tab.zip
+        wget -q -O /tmp/nx-tab.7z https://download.switchroot.org/android-11/nx-tab-beta2.75-20230705-rel.7z
+        7z x /tmp/nx-tab.7z -y -o./
+        rm -rf ./lineage-18.1-20230705-UNOFFICIAL-nx_tab.zip
         wget -q -O /tmp/wiliwili.zip https://github.com/xfangfang/wiliwili/releases/latest/download/wiliwili-NintendoSwitch.zip
         unzip -o /tmp/wiliwili.zip -d ./switch
         rm -rf ./switch/wiliwili/安装必读.txt
@@ -80,7 +80,7 @@ jobs:
         unzip -o /tmp/SaltyNX-1.2.0.zip -d ./
         wget -q -O /tmp/sphaira.zip https://github.com/ITotalJustice/sphaira/releases/download/0.6.2/sphaira.zip
         unzip -o /tmp/sphaira.zip -d ./
-        wget -q -O /tmp/uLaunch.zip https://github.com/XorTroll/uLaunch/releases/download/1.0.0/uLaunch.zip
+        wget -q -O /tmp/uLaunch.zip https://github.com/XorTroll/uLaunch/releases/latest/download/uLaunch.zip
         unzip -o /tmp/uLaunch.zip -d ./
         #将目录 /SdOut中的所有文件移到当前目录
         cp -r ./SdOut/* ./
