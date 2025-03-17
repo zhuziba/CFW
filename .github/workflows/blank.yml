@@ -42,7 +42,7 @@ jobs:
         mkdir -p ./switch/appstore
         wget -q -O ./switch/appstore/appstore.nro https://github.com/fortheusers/hb-appstore/releases/latest/download/appstore.nro
         mkdir -p ./switch/Switchfin
-        wget -q -O ./switch/Switchfin/Switchfin.nro https://github.com/dragonflylee/switchfin/releases/download/0.6.1/Switchfin.nro
+        wget -q -O ./switch/Switchfin/Switchfin.nro https://github.com/dragonflylee/switchfin/releases/latest/download/Switchfin.nro
         mkdir -p ./switch/Haku33
         wget -q -O ./switch/Haku33/Haku33.nro https://github.com/StarDustCFW/Haku33/releases/download/7.0/Haku33.nro
         mkdir -p ./switch/NX-Activity-Log
