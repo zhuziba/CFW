@@ -85,6 +85,8 @@ jobs:
         #将目录 /SdOut中的所有文件移到当前目录
         cp -r ./SdOut/* ./
         rm -rf ./SdOut
+        # 清理临时文件
+        rm -rf /tmp/*.zip /tmp/*.7z
     - name: 'Commit Files'
       id: commit
       run: |
