@@ -70,15 +70,15 @@ jobs:
         wget -q -O /tmp/tencent-switcher-gui.zip https://github.com/CaiMiao/Tencent-switcher-GUI/releases/download/0.1.2/tencent-switcher-gui.zip
         mkdir -p ./switch/tencent
         unzip -o /tmp/tencent-switcher-gui.zip -d ./switch/tencent
-        wget -q -O /tmp/switch_sysmod.zip https://github.com/ITotalJustice/ftpsrv/releases/download/1.2.2/switch_sysmod.zip
+        wget -q -O /tmp/switch_sysmod.zip https://github.com/ITotalJustice/ftpsrv/releases/latest/download/switch_sysmod.zip
         unzip -o /tmp/switch_sysmod.zip -d ./
-        wget -q -O /tmp/Awoo-Installer.zip https://github.com/Huntereb/Awoo-Installer/releases/download/1.3.5/Awoo-Installer.zip
+        wget -q -O /tmp/Awoo-Installer.zip https://github.com/Huntereb/Awoo-Installer/releases/latest/download/Awoo-Installer.zip
         unzip -o /tmp/Awoo-Installer.zip -d ./
-        wget -q -O /tmp/aio-switch-updater.zip https://github.com/HamletDuFromage/aio-switch-updater/releases/download/2.23.2/aio-switch-updater.zip
+        wget -q -O /tmp/aio-switch-updater.zip https://github.com/HamletDuFromage/aio-switch-updater/releases/latest/download/aio-switch-updater.zip
         unzip -o /tmp/aio-switch-updater.zip -d ./
         wget -q -O /tmp/SaltyNX-1.2.0.zip https://github.com/masagrator/SaltyNX/releases/download/1.2.0/SaltyNX-1.2.0.zip
         unzip -o /tmp/SaltyNX-1.2.0.zip -d ./
-        wget -q -O /tmp/sphaira.zip https://github.com/ITotalJustice/sphaira/releases/download/0.6.2/sphaira.zip
+        wget -q -O /tmp/sphaira.zip https://github.com/ITotalJustice/sphaira/releases/latest/download/sphaira.zip
         unzip -o /tmp/sphaira.zip -d ./
         wget -q -O /tmp/uLaunch.zip https://github.com/XorTroll/uLaunch/releases/latest/download/uLaunch.zip
         unzip -o /tmp/uLaunch.zip -d ./
