@@ -18,7 +18,7 @@ jobs:
         rm -rf ./atmosphere
         rm -rf ./bootloader
         rm -rf ./switch
-        wget -q -O /tmp/atmosphere.zip https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.8.0-prerelease/atmosphere-1.8.0-master-c6014b533+hbl-2.4.4+hbmenu-3.6.0.zip
+        wget -q -O /tmp/atmosphere.zip https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.9.0-prerelease/atmosphere-1.9.0-prerelease-1d3f3c6e5+hbl-2.4.4+hbmenu-3.6.0.zip
         #wget -O /tmp/hekate.zip https://github.com/CTCaer/hekate/releases/download/v6.3.0/hekate_ctcaer_6.3.0_Nyx_1.7.0.zip
         wget -q -O /tmp/hekate.zip https://github.com/easyworld/hekate/releases/download/v6.3.0/hekate_ctcaer_6.3.0_Nyx_1.7.0_sc.zip
         unzip -o /tmp/atmosphere.zip -d ./
@@ -27,7 +27,7 @@ jobs:
         cp ./tmp/hekate_ipl.ini ./bootloader/hekate_ipl.ini
         mkdir -p ./bootloader/payloads
         wget -q -O ./bootloader/payloads/TegraExplorer.bin https://github.com/suchmememanyskill/TegraExplorer/releases/latest/download/TegraExplorer.bin
-        wget -q -O ./bootloader/payloads/fusee.bin https://github.com/Atmosphere-NX/Atmosphere/releases/latest/download/fusee.bin
+        wget -q -O ./bootloader/payloads/fusee.bin https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.9.0-prerelease/fusee.bin
         wget -q -O /tmp/sys-patch.zip https://github.com/impeeza/sys-patch/releases/latest/download/sys-patch.zip
         unzip -o /tmp/sys-patch.zip -d ./
         mkdir -p ./switch/DBI
@@ -53,7 +53,7 @@ jobs:
         #unzip -o /tmp/sigpatches.zip -d ./
         wget -q -O ./switch/.overlays/ovlSysmodules.ovl https://github.com/WerWolv/ovl-sysmodules/releases/latest/download/ovlSysmodules.ovl
         wget -q -O ./switch/.overlays/ovlmenu.ovl https://github.com/ppkantorski/Ultrahand-Overlay/releases/latest/download/ovlmenu.ovl
-        wget -q -O ./switch/.overlays/FPSLocker.ovl https://github.com/masagrator/FPSLocker/releases/download/2.1.0/FPSLocker.ovl
+        wget -q -O ./switch/.overlays/FPSLocker.ovl https://github.com/masagrator/FPSLocker/releases/download/2.1.1/FPSLocker.ovl
         wget -q -O /tmp/sys-clk.zip https://github.com/retronx-team/sys-clk/releases/download/2.0.1/sys-clk-2.0.1.zip
         unzip -o /tmp/sys-clk.zip -d ./
         rm -rf ./README.md
