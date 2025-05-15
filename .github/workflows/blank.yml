@@ -76,15 +76,12 @@ jobs:
         unzip -o /tmp/Awoo-Installer.zip -d ./
         wget -q -O /tmp/aio-switch-updater.zip https://github.com/HamletDuFromage/aio-switch-updater/releases/latest/download/aio-switch-updater.zip
         unzip -o /tmp/aio-switch-updater.zip -d ./
-        wget -q -O /tmp/SaltyNX-1.2.0.zip https://github.com/masagrator/SaltyNX/releases/download/1.2.0/SaltyNX-1.2.0.zip
+        wget -q -O /tmp/SaltyNX-1.2.0.zip https://github.com/masagrator/SaltyNX/releases/download/1.2.2/SaltyNX-1.2.2.zip
         unzip -o /tmp/SaltyNX-1.2.0.zip -d ./
         wget -q -O /tmp/sphaira.zip https://github.com/ITotalJustice/sphaira/releases/latest/download/sphaira.zip
         unzip -o /tmp/sphaira.zip -d ./
         wget -q -O /tmp/uLaunch.zip https://github.com/XorTroll/uLaunch/releases/latest/download/uLaunch.zip
         unzip -o /tmp/uLaunch.zip -d ./
-        #将目录 /SdOut中的所有文件移到当前目录
-        cp -r ./SdOut/* ./
-        rm -rf ./SdOut
         # 清理临时文件
         rm -rf /tmp/*.zip /tmp/*.7z
     - name: 'Commit Files'
