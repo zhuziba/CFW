@@ -53,7 +53,7 @@ jobs:
         #unzip -o /tmp/sigpatches.zip -d ./
         wget -q -O ./switch/.overlays/ovlSysmodules.ovl https://github.com/WerWolv/ovl-sysmodules/releases/latest/download/ovlSysmodules.ovl
         wget -q -O ./switch/.overlays/ovlmenu.ovl https://github.com/ppkantorski/Ultrahand-Overlay/releases/latest/download/ovlmenu.ovl
-        wget -q -O ./switch/.overlays/FPSLocker.ovl https://github.com/masagrator/FPSLocker/releases/download/2.1.1/FPSLocker.ovl
+        wget -q -O ./switch/.overlays/FPSLocker.ovl https://github.com/masagrator/FPSLocker/releases/latest/download/FPSLocker.ovl
         wget -q -O /tmp/sys-clk.zip https://github.com/retronx-team/sys-clk/releases/download/2.0.1/sys-clk-2.0.1.zip
         unzip -o /tmp/sys-clk.zip -d ./
         rm -rf ./README.md
@@ -76,7 +76,7 @@ jobs:
         unzip -o /tmp/Awoo-Installer.zip -d ./
         wget -q -O /tmp/aio-switch-updater.zip https://github.com/HamletDuFromage/aio-switch-updater/releases/latest/download/aio-switch-updater.zip
         unzip -o /tmp/aio-switch-updater.zip -d ./
-        wget -q -O /tmp/SaltyNX.zip https://github.com/masagrator/SaltyNX/releases/download/1.2.2/SaltyNX-1.2.2.zip
+        wget -q -O /tmp/SaltyNX.zip https://github.com/masagrator/SaltyNX/releases/download/1.2.6/SaltyNX-1.2.6.zip
         unzip -o /tmp/SaltyNX.zip -d ./
         wget -q -O /tmp/sphaira.zip https://github.com/ITotalJustice/sphaira/releases/latest/download/sphaira.zip
         unzip -o /tmp/sphaira.zip -d ./
