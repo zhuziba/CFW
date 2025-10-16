@@ -18,7 +18,7 @@ jobs:
         rm -rf ./atmosphere
         rm -rf ./bootloader
         rm -rf ./switch
-        wget -q -O /tmp/atmosphere.zip https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.9.4/atmosphere-1.9.4-master-d7936d3fa+hbl-2.4.4+hbmenu-3.6.0.zip
+        wget -q -O /tmp/atmosphere.zip https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.9.5/atmosphere-1.9.5-master-de9b02007+hbl-2.4.4+hbmenu-3.6.0.zip
         #wget -O /tmp/hekate.zip https://github.com/CTCaer/hekate/releases/download/v6.3.0/hekate_ctcaer_6.3.0_Nyx_1.7.0.zip
         wget -q -O /tmp/hekate.zip https://github.com/easyworld/hekate/releases/download/v6.3.1/hekate_ctcaer_6.3.1_Nyx_1.7.0_sc.zip
         unzip -o /tmp/atmosphere.zip -d ./
@@ -27,7 +27,7 @@ jobs:
         cp ./tmp/hekate_ipl.ini ./bootloader/hekate_ipl.ini
         mkdir -p ./bootloader/payloads
         wget -q -O ./bootloader/payloads/TegraExplorer.bin https://github.com/suchmememanyskill/TegraExplorer/releases/latest/download/TegraExplorer.bin
-        wget -q -O ./bootloader/payloads/fusee.bin https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.9.4/fusee.bin
+        wget -q -O ./bootloader/payloads/fusee.bin https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.9.5/fusee.bin
         wget -q -O /tmp/sys-patch.zip https://github.com/impeeza/sys-patch/releases/latest/download/sys-patch.zip
         unzip -o /tmp/sys-patch.zip -d ./
         mkdir -p ./switch/DBI
