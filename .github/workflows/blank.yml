@@ -76,7 +76,7 @@ jobs:
         unzip -o /tmp/Awoo-Installer.zip -d ./
         wget -q -O /tmp/aio-switch-updater.zip https://github.com/HamletDuFromage/aio-switch-updater/releases/latest/download/aio-switch-updater.zip
         unzip -o /tmp/aio-switch-updater.zip -d ./
-        wget -q -O /tmp/SaltyNX.zip https://github.com/masagrator/SaltyNX/releases/download/1.2.6/SaltyNX-1.2.6.zip
+        wget -q -O /tmp/SaltyNX.zip https://github.com/masagrator/SaltyNX/releases/download/1.5.9/SaltyNX.zip
         unzip -o /tmp/SaltyNX.zip -d ./
         wget -q -O /tmp/sphaira.zip https://github.com/ITotalJustice/sphaira/releases/latest/download/sphaira.zip
         unzip -o /tmp/sphaira.zip -d ./
@@ -85,7 +85,7 @@ jobs:
         # 清理临时文件
         rm -rf /tmp/*.zip /tmp/*.7z
     - name: 'Commit Files'
-      id: commit
+      id: 提交
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
