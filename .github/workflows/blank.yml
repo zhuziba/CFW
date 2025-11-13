@@ -85,7 +85,7 @@ jobs:
         # 清理临时文件
         rm -rf /tmp/*.zip /tmp/*.7z
     - name: 'Commit Files'
-      id: 提交
+      id: push
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
