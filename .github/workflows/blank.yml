@@ -19,6 +19,7 @@ jobs:
         rm -rf ./bootloader
         rm -rf ./switch
         rm -rf ./uLaunch
+        rm -rf ./dist
         wget -q -O ./tmp/atmosphere.zip https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.10.1/atmosphere-1.10.1-master-21c0f75a2+hbl-2.4.5+hbmenu-3.6.1.zip
         #wget -O ./tmp/hekate.zip https://github.com/CTCaer/hekate/releases/download/v6.3.0/hekate_ctcaer_6.3.0_Nyx_1.7.0.zip
         wget -q -O ./tmp/hekate.zip https://github.com/easyworld/hekate/releases/download/v6.4.2/hekate_ctcaer_6.4.2_Nyx_1.8.2_sc.zip
