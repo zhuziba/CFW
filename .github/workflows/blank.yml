@@ -46,7 +46,7 @@ jobs:
         mkdir -p ./switch/Switchfin
         wget -q -O ./switch/Switchfin/Switchfin.nro https://github.com/dragonflylee/switchfin/releases/latest/download/Switchfin.nro
         mkdir -p ./switch/Haku33
-        wget -q -O ./switch/Haku33/Haku33.nro https://github.com/StarDustCFW/Haku33/releases/download/7.0/Haku33.nro
+        wget -q -O ./switch/Haku33/Haku33.nro https://github.com/StarDustCFW/Haku33/releases/latest/download/Haku33.nro
         mkdir -p ./switch/NX-Activity-Log
         wget -q -O ./switch/NX-Activity-Log/NX-Activity-Log.nro https://github.com/zdm65477730/NX-Activity-Log/releases/latest/download/NX-Activity-Log.nro
         mkdir -p ./switch/90DNS
