@@ -20,18 +20,18 @@ jobs:
         rm -rf ./switch
         rm -rf ./uLaunch
         rm -rf ./dist
-        wget -q -O ./tmp/atmosphere.zip https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.10.1/atmosphere-1.10.1-master-21c0f75a2+hbl-2.4.5+hbmenu-3.6.1.zip
-        #wget -O ./tmp/hekate.zip https://github.com/CTCaer/hekate/releases/download/v6.3.0/hekate_ctcaer_6.3.0_Nyx_1.7.0.zip
-        wget -q -O ./tmp/hekate.zip https://github.com/easyworld/hekate/releases/download/v6.4.2/hekate_ctcaer_6.4.2_Nyx_1.8.2_sc.zip
-        unzip -o ./tmp/atmosphere.zip -d ./
-        unzip -o ./tmp/hekate.zip -d ./
+        wget -q -O /tmp/atmosphere.zip https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.10.1/atmosphere-1.10.1-master-21c0f75a2+hbl-2.4.5+hbmenu-3.6.1.zip
+        #wget -O /tmp/hekate.zip https://github.com/CTCaer/hekate/releases/download/v6.3.0/hekate_ctcaer_6.3.0_Nyx_1.7.0.zip
+        wget -q -O /tmp/hekate.zip https://github.com/easyworld/hekate/releases/download/v6.4.2/hekate_ctcaer_6.4.2_Nyx_1.8.2_sc.zip
+        unzip -o /tmp/atmosphere.zip -d ./
+        unzip -o /tmp/hekate.zip -d ./
         mv ./hekate_ctcaer_6.4.2.bin ./payload.bin
         cp ./tmp/hekate_ipl.ini ./bootloader/hekate_ipl.ini
         mkdir -p ./bootloader/payloads
         wget -q -O ./bootloader/payloads/TegraExplorer.bin https://github.com/suchmememanyskill/TegraExplorer/releases/latest/download/TegraExplorer.bin
         wget -q -O ./bootloader/payloads/fusee.bin https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.10.1/fusee.bin
-        wget -q -O ./tmp/sys-patch.zip https://github.com/impeeza/sys-patch/releases/download/v1.5.9/sys-patch-v1.5.9.zip
-        unzip -o ./tmp/sys-patch.zip -d ./
+        wget -q -O /tmp/sys-patch.zip https://github.com/impeeza/sys-patch/releases/download/v1.5.9/sys-patch-v1.5.9.zip
+        unzip -o /tmp/sys-patch.zip -d ./
         mkdir -p ./switch/DBI
         wget -q -O ./switch/DBI/dbi.config  https://github.com/rashevskyv/dbi/releases/latest/download/dbi.config
         wget -q -O ./switch/DBI/DBI.nro https://github.com/rashevskyv/dbi/releases/latest/download/DBI.nro
@@ -84,8 +84,6 @@ jobs:
         unzip -o /tmp/sphaira.zip -d ./
         #wget -q -O /tmp/uLaunch.zip https://github.com/XorTroll/uLaunch/releases/latest/download/uLaunch.zip
         #unzip -o /tmp/uLaunch.zip -d ./
-        # 清理临时文件
-        rm -rf ./tmp
     - name: 'Commit Files'
       id: push
       run: |
