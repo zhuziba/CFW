@@ -78,14 +78,14 @@ jobs:
         unzip -o /tmp/Awoo-Installer.zip -d ./
         wget -q -O /tmp/aio-switch-updater.zip https://github.com/HamletDuFromage/aio-switch-updater/releases/latest/download/aio-switch-updater.zip
         unzip -o /tmp/aio-switch-updater.zip -d ./
-        wget -q -O /tmp/SaltyNX.zip https://github.com/masagrator/SaltyNX/releases/download/1.5.9/SaltyNX.zip
+        wget -q -O /tmp/SaltyNX.zip https://github.com/masagrator/SaltyNX/releases/latest/download//SaltyNX.zip
         unzip -o /tmp/SaltyNX.zip -d ./
         wget -q -O /tmp/sphaira.zip https://github.com/ITotalJustice/sphaira/releases/latest/download/sphaira.zip
         unzip -o /tmp/sphaira.zip -d ./
         #wget -q -O /tmp/uLaunch.zip https://github.com/XorTroll/uLaunch/releases/latest/download/uLaunch.zip
         #unzip -o /tmp/uLaunch.zip -d ./
         # 清理临时文件
-        rm -rf /tmp/*.zip /tmp/*.7z
+        rm -rf ./tmp
     - name: 'Commit Files'
       id: push
       run: |
