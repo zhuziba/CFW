@@ -5,13 +5,16 @@ on:
 # 定时触发编译
   schedule:
     - cron: 39 22 * * *
+concurrency:
+  group: rolling-nightly-release
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-22.04  
+    permissions:
+      contents: write
     steps:
     - uses: actions/checkout@v6
-    - name: Record time  
-      run: echo `date` > ./tmp/date.log
     - name: down switchsd
       run: |
         mkdir -p ./
@@ -84,14 +87,20 @@ jobs:
         unzip -o /tmp/sphaira.zip -d ./
         #wget -q -O /tmp/uLaunch.zip https://github.com/XorTroll/uLaunch/releases/latest/download/uLaunch.zip
         #unzip -o /tmp/uLaunch.zip -d ./
-    - name: 'Commit Files'
-      id: push
+    - name: Package SD card files
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add .
-        git commit -a -m "Add changes"
-    - name: Push Dust
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{secrets.GITHUB_TOKEN}}
+        mkdir -p ./dist
+        zip -qr ./dist/CFW.zip . -x './.git/*' './dist/*'
+    - name: Publish rolling nightly release
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        if gh release view nightly >/dev/null 2>&1; then
+          gh release upload nightly ./dist/CFW.zip --clobber
+        else
+          gh release create nightly ./dist/CFW.zip \
+            --title "Latest nightly build" \
+            --notes "Rolling build of the SD card files. Download and extract CFW.zip to the root of the SD card." \
+            --prerelease \
+            --target "$GITHUB_SHA"
+        fi
