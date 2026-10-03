@@ -14,7 +14,7 @@ jobs:
     permissions:
       contents: write
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
     - name: down switchsd
       run: |
         mkdir -p ./
@@ -31,62 +31,63 @@ jobs:
         mv ./hekate_ctcaer_6.5.3.bin ./payload.bin
         cp ./tmp/hekate_ipl.ini ./bootloader/hekate_ipl.ini
         mkdir -p ./bootloader/payloads
-        wget -q -O ./bootloader/payloads/TegraExplorer.bin https://github.com/suchmememanyskill/TegraExplorer/releases/latest/download/TegraExplorer.bin
+        wget -q -O ./bootloader/payloads/TegraExplorer.bin https://github.com/suchmememanyskill/TegraExplorer/releases/download/4.2.0/TegraExplorer.bin
         wget -q -O ./bootloader/payloads/fusee.bin https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.11.2/fusee.bin
         wget -q -O /tmp/sys-patch.zip https://github.com/impeeza/sys-patch/releases/download/v1.6.2.3/sys-patch-v1.6.2.3.zip
         unzip -o /tmp/sys-patch.zip -d ./
         mkdir -p ./switch/DBI
-        wget -q -O ./switch/DBI/dbi.config  https://github.com/rashevskyv/dbi/releases/latest/download/dbi.config
-        wget -q -O ./switch/DBI/DBI.nro https://github.com/rashevskyv/dbi/releases/latest/download/DBI.nro
+        wget -q -O ./switch/DBI/dbi.config https://github.com/rashevskyv/dbi/releases/download/912ru/dbi.config
+        wget -q -O ./switch/DBI/DBI.nro https://github.com/rashevskyv/dbi/releases/download/912ru/DBI.nro
+        mkdir -p ./switch/Nextendo
+        wget -q -O ./switch/Nextendo/nextendo.nro https://github.com/NextendoNetwork/Prelude-Nro/releases/download/v3.5.11/nextendo.nro
         mkdir -p ./switch/JKSV
-        wget -q -O ./switch/JKSV/JKSV.nro https://github.com/J-D-K/JKSV/releases/latest/download/JKSV.nro
+        wget -q -O ./switch/JKSV/JKSV.nro https://github.com/J-D-K/JKSV/releases/download/12%2F02%2F2025/JKSV.nro
         mkdir -p ./switch/Goldleaf
-        wget -q -O ./switch/Goldleaf/Goldleaf.nro https://github.com/XorTroll/Goldleaf/releases/latest/download/Goldleaf.nro
+        wget -q -O ./switch/Goldleaf/Goldleaf.nro https://github.com/XorTroll/Goldleaf/releases/download/1.2.1/Goldleaf.nro
         mkdir -p ./switch/Amiigo
-        wget -q -O ./switch/Amiigo/Amiigo.nro https://github.com/CompSciOrBust/Amiigo/releases/latest/download/Amiigo.nro
+        wget -q -O ./switch/Amiigo/Amiigo.nro https://github.com/CompSciOrBust/Amiigo/releases/download/2.4.1/Amiigo.nro
         mkdir -p ./switch/appstore
-        wget -q -O ./switch/appstore/appstore.nro https://github.com/fortheusers/hb-appstore/releases/latest/download/appstore.nro
+        wget -q -O ./switch/appstore/appstore.nro https://github.com/fortheusers/hb-appstore/releases/download/v2.3.2/appstore.nro
         mkdir -p ./switch/Switchfin
-        wget -q -O ./switch/Switchfin/Switchfin.nro https://github.com/dragonflylee/switchfin/releases/latest/download/Switchfin.nro
+        wget -q -O ./switch/Switchfin/Switchfin.nro https://github.com/dragonflylee/switchfin/releases/download/0.9.4/Switchfin.nro
         mkdir -p ./switch/Haku33
-        wget -q -O ./switch/Haku33/Haku33.nro https://github.com/StarDustCFW/Haku33/releases/latest/download/Haku33.nro
+        wget -q -O ./switch/Haku33/Haku33.nro https://github.com/StarDustCFW/Haku33/releases/download/7.2/Haku33.nro
         mkdir -p ./switch/NX-Activity-Log
-        wget -q -O ./switch/NX-Activity-Log/NX-Activity-Log.nro https://github.com/zdm65477730/NX-Activity-Log/releases/latest/download/NX-Activity-Log.nro
+        wget -q -O ./switch/NX-Activity-Log/NX-Activity-Log.nro https://github.com/zdm65477730/NX-Activity-Log/releases/download/v1.5.9/NX-Activity-Log.nro
         mkdir -p ./switch/90DNS
         wget -q -O ./switch/90DNS/90DNS_tester.nro https://github.com/meganukebmp/Switch_90DNS_tester/releases/download/v1.0.4/Switch_90DNS_tester.nro
         #wget -O /tmp/sigpatches.zip https://sigmapatches.su/sigpatches.zip
         #unzip -o /tmp/sigpatches.zip -d ./
-        wget -q -O ./switch/.overlays/ovlSysmodules.ovl https://github.com/WerWolv/ovl-sysmodules/releases/latest/download/ovlSysmodules.ovl
-        wget -q -O ./switch/.overlays/ovlmenu.ovl https://github.com/ppkantorski/Ultrahand-Overlay/releases/latest/download/ovlmenu.ovl
-        wget -q -O ./switch/.overlays/FPSLocker.ovl https://github.com/masagrator/FPSLocker/releases/latest/download/FPSLocker.ovl
+        wget -q -O ./switch/.overlays/ovlSysmodules.ovl https://github.com/WerWolv/ovl-sysmodules/releases/download/v1.3.1/ovlSysmodules.ovl
+        wget -q -O ./switch/.overlays/ovlmenu.ovl https://github.com/ppkantorski/Ultrahand-Overlay/releases/download/v2.5.3/ovlmenu.ovl
+        wget -q -O ./switch/.overlays/FPSLocker.ovl https://github.com/masagrator/FPSLocker/releases/download/3.4.0/FPSLocker.ovl
         wget -q -O /tmp/sys-clk.zip https://github.com/retronx-team/sys-clk/releases/download/2.0.1/sys-clk-2.0.1-21fix.zip
         unzip -o /tmp/sys-clk.zip -d ./
         rm -rf ./README.md
         wget -q -O /tmp/nx-ovlloader.zip https://github.com/WerWolv/nx-ovlloader/releases/download/v1.0.7/nx-ovlloader.zip
         unzip -o /tmp/nx-ovlloader.zip -d ./
-        sudo apt-get install p7zip-full
+        sudo apt-get update
+        sudo apt-get install -y p7zip-full=16.02+dfsg-8
         wget -q -O /tmp/nx-tab.7z https://download.switchroot.org/android-11/nx-tab-beta2.75-20230705-rel.7z
         7z x /tmp/nx-tab.7z -y -o./
         rm -rf ./lineage-18.1-20230705-UNOFFICIAL-nx_tab.zip
-        wget -q -O /tmp/wiliwili.zip https://github.com/xfangfang/wiliwili/releases/latest/download/wiliwili-NintendoSwitch.zip
+        wget -q -O /tmp/wiliwili.zip https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-NintendoSwitch.zip
         unzip -o /tmp/wiliwili.zip -d ./switch
         rm -rf ./switch/wiliwili/安装必读.txt
         rm -rf ./switch/wiliwili/README.md
         wget -q -O /tmp/tencent-switcher-gui.zip https://github.com/CaiMiao/Tencent-switcher-GUI/releases/download/0.1.2/tencent-switcher-gui.zip
         mkdir -p ./switch/tencent
         unzip -o /tmp/tencent-switcher-gui.zip -d ./switch/tencent
-        wget -q -O /tmp/switch_sysmod.zip https://github.com/ITotalJustice/ftpsrv/releases/latest/download/switch_sysmod.zip
+        wget -q -O /tmp/switch_sysmod.zip https://github.com/ITotalJustice/ftpsrv/releases/download/1.2.2/switch_sysmod.zip
         unzip -o /tmp/switch_sysmod.zip -d ./
-        wget -q -O /tmp/Awoo-Installer.zip https://github.com/Huntereb/Awoo-Installer/releases/latest/download/Awoo-Installer.zip
+        wget -q -O /tmp/Awoo-Installer.zip https://github.com/Huntereb/Awoo-Installer/releases/download/1.3.6/Awoo-Installer.zip
         unzip -o /tmp/Awoo-Installer.zip -d ./
-        wget -q -O /tmp/aio-switch-updater.zip https://github.com/HamletDuFromage/aio-switch-updater/releases/latest/download/aio-switch-updater.zip
+        wget -q -O /tmp/aio-switch-updater.zip https://github.com/HamletDuFromage/aio-switch-updater/releases/download/2.23.3/aio-switch-updater.zip
         unzip -o /tmp/aio-switch-updater.zip -d ./
-        wget -q -O /tmp/SaltyNX.zip https://github.com/masagrator/SaltyNX/releases/latest/download//SaltyNX.zip
+        wget -q -O /tmp/SaltyNX.zip https://github.com/masagrator/SaltyNX/releases/download/2.0.0/SaltyNX.zip
         unzip -o /tmp/SaltyNX.zip -d ./
-        wget -q -O /tmp/sphaira.zip https://github.com/ITotalJustice/sphaira/releases/latest/download/sphaira.zip
+        wget -q -O /tmp/sphaira.zip https://github.com/ITotalJustice/sphaira/releases/download/1.0.7/sphaira.zip
         unzip -o /tmp/sphaira.zip -d ./
-        #wget -q -O /tmp/uLaunch.zip https://github.com/XorTroll/uLaunch/releases/latest/download/uLaunch.zip
-        #unzip -o /tmp/uLaunch.zip -d ./
     - name: Package SD card files
       run: |
         mkdir -p ./dist
