@@ -33,13 +33,13 @@ jobs:
         mkdir -p ./bootloader/payloads
         wget -q -O ./bootloader/payloads/TegraExplorer.bin https://github.com/suchmememanyskill/TegraExplorer/releases/download/4.2.0/TegraExplorer.bin
         wget -q -O ./bootloader/payloads/fusee.bin https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.11.2/fusee.bin
-        wget -q -O /tmp/sys-patch.zip https://github.com/impeeza/sys-patch/releases/download/v1.6.2.3/sys-patch-v1.6.2.3.zip
+        wget -q -O /tmp/sys-patch.zip https://github.com/impeeza/sys-patch/releases/download/v1.6.3.0/sys-patch-v1.6.3.0.zip
         unzip -o /tmp/sys-patch.zip -d ./
         mkdir -p ./switch/DBI
         wget -q -O ./switch/DBI/dbi.config https://github.com/rashevskyv/dbi/releases/download/912ru/dbi.config
         wget -q -O ./switch/DBI/DBI.nro https://github.com/rashevskyv/dbi/releases/download/912ru/DBI.nro
         mkdir -p ./switch/Nextendo
-        wget -q -O ./switch/Nextendo/nextendo.nro https://github.com/NextendoNetwork/Prelude-Nro/releases/download/v3.5.11/nextendo.nro
+        wget -q -O ./switch/Nextendo/nextendo.nro https://git.nextendo.network/NextendoNetwork/Prelude-Nextendo/releases/download/v5.0.2/nextendo.nro
         mkdir -p ./switch/JKSV
         wget -q -O ./switch/JKSV/JKSV.nro https://github.com/J-D-K/JKSV/releases/download/12%2F02%2F2025/JKSV.nro
         mkdir -p ./switch/Goldleaf
